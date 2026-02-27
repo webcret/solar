@@ -1,0 +1,135 @@
+:root {
+  --bg: #f6f4ee;
+  --surface: #fffcf6;
+  --line: #d8d0bf;
+  --text: #2a3127;
+  --muted: #5f6659;
+  --brand: #5f7f4f;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: "Avenir Next", "Segoe UI", sans-serif;
+  color: var(--text);
+  background: linear-gradient(180deg, #f4f1e7, var(--bg));
+}
+
+.wrap {
+  width: min(1080px, 92vw);
+  margin: 0 auto;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 0;
+}
+
+.logo {
+  font-weight: 700;
+  text-decoration: none;
+  color: var(--text);
+}
+
+.btn {
+  display: inline-block;
+  border-radius: 999px;
+  padding: 0.62rem 1rem;
+  text-decoration: none;
+  border: 1px solid var(--line);
+  color: var(--surface);
+  background: var(--brand);
+  font-weight: 600;
+}
+
+.hero-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  align-items: center;
+  padding: 2.5rem 0 2rem;
+}
+
+.kicker {
+  margin: 0;
+  font-size: 0.8rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #76816f;
+}
+
+h1 {
+  margin: 0.8rem 0;
+  font-size: clamp(2rem, 6vw, 3.6rem);
+  line-height: 1.08;
+  max-width: 16ch;
+}
+
+.hero p {
+  color: var(--muted);
+  max-width: 54ch;
+}
+
+.quote {
+  padding: 1.1rem;
+  border: 1px solid var(--line);
+  border-radius: 1rem;
+  background: var(--surface);
+}
+
+.quote p {
+  margin: 0 0 0.7rem;
+  color: var(--text);
+  font-size: 1.05rem;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 0.8rem;
+  margin: 1rem 0;
+}
+
+.cards article,
+.split article {
+  border: 1px solid var(--line);
+  background: var(--surface);
+  border-radius: 1rem;
+  padding: 1rem;
+}
+
+.cards p,
+.split li {
+  color: var(--muted);
+}
+
+.split {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 0.8rem;
+  margin: 0 0 2.2rem;
+}
+
+.book form {
+  display: grid;
+  gap: 0.55rem;
+}
+
+input,
+button {
+  min-height: 42px;
+  border-radius: 0.6rem;
+  border: 1px solid var(--line);
+  padding: 0 0.75rem;
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+  font-weight: 600;
+  color: var(--surface);
+  background: var(--brand);
+}
